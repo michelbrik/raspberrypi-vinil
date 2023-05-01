@@ -1,10 +1,8 @@
 {
   "RFID1": {
-    "id_kind": "track",
-    "song_id": "5btDKzAsFh975NSWxwBHRc"
+    "song_id": ["5btDKzAsFh975NSWxwBHRc", "3GmJxfnUDrIs1iCfKUELFz"]
   },
     "RFID2": {
-    "id_kind": "playlist",
-    "song_id": "0JFatPoPq82gNcPa4esOzj"
+    "song_id": ["0JFatPoPq82gNcPa4esOzj"]
   }
 }

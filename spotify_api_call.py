@@ -29,26 +29,25 @@ def transfer_to_device(client):
     client.transfer_playback(device_id=getenv("DEVICE_ID"), force_play=True)
 
 
-def play_song(client, song_id, id_kind):
+def play_song(client, song_ids):
     """
     Play song using spotify API client.
 
     :param client: spotipy.Spotify.
-    :param song_id: str.
-    :param id_kind: str.
+    :param song_ids: str.
     :return:
     """
-    client.start_playback(device_id=getenv("DEVICE_ID"), uris=[f'spotify:{id_kind}:{song_id}'])
+    list_of_songs = [f'spotify:track:{song_id}' for song_id in song_ids]
+    client.start_playback(device_id=getenv("DEVICE_ID"), uris=list_of_songs)
 
 
-def main(id_kind, song_id):
+def main(song_id):
     """
     Main API caller function.
 
-    :param id_kind: str.
-    :param song_id: str.
+    :param song_id: list.
     :return:
     """
     client = create_spotify_api_client()
     transfer_to_device(client)
-    play_song(client, song_id=song_id, id_kind=id_kind)
+    play_song(client, song_id=song_id)
