@@ -52,5 +52,3 @@ def main(id_kind, song_id):
     client = create_spotify_api_client()
     transfer_to_device(client)
     play_song(client, song_id=song_id, id_kind=id_kind)
-
-main("track", "2M0iH6ZIrTTdaWvEQECC5a")
