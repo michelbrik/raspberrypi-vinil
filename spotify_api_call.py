@@ -53,4 +53,5 @@ def main(id_kind, song_id):
     transfer_to_device(client)
     play_song(client, song_id=song_id, id_kind=id_kind)
 
+
 main("album", "4sb0eMpDn3upAFfyi4q2rw")
