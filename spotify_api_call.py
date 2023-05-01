@@ -50,4 +50,4 @@ def main(song_id):
     """
     client = create_spotify_api_client()
     transfer_to_device(client)
-    play_song(client, song_id=song_id)
+    play_song(client, song_id)
